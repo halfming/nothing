@@ -1,3 +1,4 @@
+#建立次级目录文件和文件夹 并在xml文件中写入内容
 function copydir() {
 mkdir ../$1
 cp index.php ../$1
@@ -17,7 +18,7 @@ sed -i "3i<data>" ../index.xml
 sed -i "2s/index.xml/$1.xml/g" ../$1/index.php
 }
 
-
+#遍历doc目录
 for i in `ls ../doc`
 do
 echo $i
@@ -29,7 +30,9 @@ echo $i
     echo "add $i index"
   fi
 done
+#生成临时文件
 cp -r ../doc ../tmp
+#将doc下的文件添加tag 做好链接
 function cphtml(){
 	LINK="../$2/$1.php"
 	THEME=`sed '1s/<[^<]*>//g' ../tmp/$2/$1|head -1`
@@ -56,6 +59,7 @@ function cphtml(){
 
 	cp -f ../tmp/$2/$1 ../$2/$1.php 
 }
+#文件存在的话 不写入xml
 function updatehtml(){
 	DATE=`date`
 	
@@ -73,13 +77,14 @@ function updatehtml(){
 
 	cp -f ../tmp/$2/$1 ../$2/$1.php 	
 }
+#遍历doc下所有文件
 for i in `ls ../doc`
 do
   for j in `ls ../doc/$i/ | sed "s/readme//g"`
   do
     if [ -e ../$i/$j.php ];
     then
-#这里可以比较两个文件内容    
+#这里可以比较两个文件内容（未实现）    
       updatehtml $j $i
       sed -i "16i<p>$DATE update $j -> $i</p>" ../log.html
       echo "yes"
@@ -92,4 +97,4 @@ do
   done
 done
 rm -rf ../tmp
-#过程中加入html tag
+
