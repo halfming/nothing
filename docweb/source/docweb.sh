@@ -74,8 +74,12 @@ function updatehtml(){
 	
 	sed -i "1i<?php include \"../head.php\" ?>" ../tmp/$2/$1
 	sed -i '$a<?php include \"../footer.php\" ?>' ../tmp/$2/$1
-
-	cp -f ../tmp/$2/$1 ../$2/$1.php 	
+for p in `diff ../tmp/$2/$1 ../$2/$1.php`
+do
+	cp -f ../tmp/$2/$1 ../$2/$1.php
+        sed -i "16i<p>$DATE update $j -> $i</p>" ../log.html
+	break
+done 	
 }
 #遍历doc下所有文件
 for i in `ls ../doc`
@@ -86,7 +90,6 @@ do
     then
 #这里可以比较两个文件内容（未实现）    
       updatehtml $j $i
-      sed -i "16i<p>$DATE update $j -> $i</p>" ../log.html
       echo "yes"
     else
       cphtml $j $i
