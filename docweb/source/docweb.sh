@@ -31,7 +31,7 @@ echo $i
 done
 cp -r ../doc ../tmp
 function cphtml(){
-	LINK="../$2/$1"
+	LINK="../$2/$1.php"
 	THEME=`sed '1s/<[^<]*>//g' ../tmp/$2/$1|head -1`
 	CONTENT=`sed '2s/<[^<]*>//g' ../tmp/$2/$1|head -2|tail -1`
 	DATE=`date`
@@ -58,6 +58,16 @@ function cphtml(){
 }
 function updatehtml(){
 	DATE=`date`
+	
+		sed -i "s/^$/<\/p><p>/g" ../tmp/$2/$1
+	sed -i "s/$/<br \/>/g" ../tmp/$2/$1
+	sed -i "s/<p><br \/>/<p>/g" ../tmp/$2/$1
+	sed -i "1s/^/<h1>/g" ../tmp/$2/$1
+	sed -i "1s/<br \/>/<\/h1>/g" ../tmp/$2/$1
+	sed -i "2s/^/<p>/g" ../tmp/$2/$1
+	sed -i "2s/<br \/>/<\/p><p>/g" ../tmp/$2/$1
+	sed -i '$a</p>' ../tmp/$2/$1
+	
 	sed -i "1i<?php include \"../head.php\" ?>" ../tmp/$2/$1
 	sed -i '$a<?php include \"../footer.php\" ?>' ../tmp/$2/$1
 
