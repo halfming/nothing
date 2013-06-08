@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datas>
+<data>
+<link>../linux/yy.php</link>
+<theme>ghgh</theme>
+<content>hjh</content>
+</data>
+<data>
+<link>../linux/uu</link>
+<theme>hhh</theme>
+<content>jhj</content>
+</data>
+	<data>
+		<link>../think/layer</link>
+		<theme>层</theme>
+		<content>层让复杂的事情变简单。</content>
+	</data>
+	<data>
+		<link>123</link>
+		<theme>选择</theme>
+		<content>人生处处是选择</content>
+	</data>
+	<data>
+		<link>345</link>
+		<theme>抽象</theme>
+		<content>抽象</content>
+	</data>
+</datas>

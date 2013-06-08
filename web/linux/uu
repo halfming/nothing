@@ -1,0 +1,4 @@
+<?php include "../head.php" ?>
+<h1>hhh</h1>
+<p>jhj</p>
+<?php include "../footer.php" ?>
