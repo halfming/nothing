@@ -1,9 +1,0 @@
-hello
-=========================
-gfgfg
-hgj
-hghjg
-
-hghgj::
-
-    #include <stdio.h>
