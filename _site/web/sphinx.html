@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sphinx使用 &mdash; bdm 0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="bdm 0 documentation" href="../index.html" />
+    <link rel="up" title="占位" href="index.html" />
+    <link rel="next" title="算法" href="../algorithm/index.html" />
+    <link rel="prev" title="静态网页生成" href="doc_web.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../index.html">bdm</a>
+        <span class="navbar-text pull-left"><b>0</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../linux/base/index.html">linux基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/server/index.html">linux服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/tools/index.html">linux工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/other/index.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/base/index.html">网络基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/cisco/index.html">思科内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/operation/index.html">网络操作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../program/bash/index.html">bash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../program/python/index.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../program/c/index.html">c</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../program/go/index.html">go</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">占位</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithm/index.html">算法</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">sphinx使用</a><ul>
+<li><a class="reference internal" href="#id1">安装</a></li>
+<li><a class="reference internal" href="#restruretext">reStrureText</a><ul>
+<li><a class="reference internal" href="#id2">段落</a></li>
+<li><a class="reference internal" href="#id3">列表</a></li>
+<li><a class="reference internal" href="#id4">代码</a></li>
+<li><a class="reference internal" href="#id5">章节</a></li>
+<li><a class="reference internal" href="#id6">表格</a></li>
+<li><a class="reference internal" href="#id7">超链接</a></li>
+<li><a class="reference internal" href="#id8">其他</a></li>
+<li><a class="reference internal" href="#id9">索引生成</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+  <li><a href="doc_web.html"
+         title="previous chapter">&laquo; 静态网页生成</a></li>
+  <li><a href="../algorithm/index.html"
+         title="next chapter">算法 &raquo;</a></li>
+            
+            
+              <li>
+  <a href="../_sources/web/sphinx.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+  <div class="span3 bs-docs-sidebar "><br /><br />
+  
+              
+              
+  
+  <ul class="nav nav-list bs-docs-sidenav affix"><ul>
+<li><a class="reference internal" href="#">sphinx使用</a><ul>
+<li><a class="reference internal" href="#id1">安装</a></li>
+<li><a class="reference internal" href="#restruretext">reStrureText</a><ul>
+<li><a class="reference internal" href="#id2">段落</a></li>
+<li><a class="reference internal" href="#id3">列表</a></li>
+<li><a class="reference internal" href="#id4">代码</a></li>
+<li><a class="reference internal" href="#id5">章节</a></li>
+<li><a class="reference internal" href="#id6">表格</a></li>
+<li><a class="reference internal" href="#id7">超链接</a></li>
+<li><a class="reference internal" href="#id8">其他</a></li>
+<li><a class="reference internal" href="#id9">索引生成</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+            
+  </div>
+  <div class="span9">
+  
+  <div class="section" id="sphinx">
+<h1>sphinx使用<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>安装<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">pip install sphinx</div>
+<div class="line">初始化$ sphinx-quickstart</div>
+<div class="line">回答一些列问题</div>
+</div>
+<ol class="arabic simple">
+<li>文档根目录(Root path for the documentation)，默认为当前目录(.)</li>
+<li>是否分离文档源代码与生成后的文档(Separate source and build directories): y</li>
+<li>模板与静态文件存放目录前缀(Name prefix for templates and static dir):_</li>
+<li>项目名称(Project name) : EvaEngine</li>
+<li>作者名称(Author name)：AlloVince</li>
+<li>项目版本(Project version) : 1.0.1</li>
+<li>文档默认扩展名(Source file suffix) : .rst</li>
+<li>默认首页文件名(Name of your master document):index</li>
+<li>是否添加epub目录(Do you want to use the epub builder):n</li>
+<li>启用autodoc|doctest|intersphinx|todo|coverage|pngmath|ifconfig|viewcode：n</li>
+<li>生成Makefile (Create Makefile)：y</li>
+<li>生成windows用命令行(Create Windows command file):y</li>
+</ol>
+<p>默认会在当前目录生成一些文件conf.py是配置文件</p>
+<div class="line-block">
+<div class="line">新建一个文件test.rst</div>
+<div class="line">编辑index.rst对应部分</div>
+</div>
+<div class="highlight-python"><pre>.. toctree::
+   :maxdepth: 1
+
+   test.rst</pre>
+</div>
+<dl class="docutils">
+<dt>当然test.rst也可以换成dir/test.rst。总之就是相对目录,以上内容会在index.rst中生成牡蛎</dt>
+<dd>当前目录执行make html 相当与sphinx-build -b html</dd>
+</dl>
+<div class="highlight-python"><pre>sphinx-build -b html sourcedir builddir
+-b 指定生成的文件格式
+sourcedir builddir 代表生成的文件保存到builddir</pre>
+</div>
+</div>
+<div class="section" id="restruretext">
+<h2>reStrureText<a class="headerlink" href="#restruretext" title="Permalink to this headline">¶</a></h2>
+<p>以下只是部分用法</p>
+<div class="section" id="id2">
+<h3>段落<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>缩进分割段落，不过恢复的时候需要空行</p>
+<div class="highlight-python"><pre>第一行
+    第二行
+        第三行
+
+    恢复
+
+恢复</pre>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>列表<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>无序列表*空格</p>
+<div class="highlight-python"><pre>* 列表1
+* 列表2</pre>
+</div>
+<p>有序列表 数字. 空格</p>
+<div class="highlight-python"><pre>1. list
+2. list
+6. list</pre>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>代码<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">显示源代码 两个冒号`::`</div>
+<div class="line">以两个冒号开头，空行 之后的缩进文本都视为代码</div>
+<div class="line">冒号之前有内容的话显示一个冒号</div>
+</div>
+<div class="highlight-python"><pre>::
+
+我是代码</pre>
+</div>
+<p>另一种代码高亮</p>
+<div class="highlight-python"><pre>.. code-block:: python
+
+    def foo():
+        print "Love Python, Love FreeDome"
+        print "E文标点,.0123456789,中文标点,. "</pre>
+</div>
+<p>::后指定代码类型，这个是pygment库实现的</p>
+</div>
+<div class="section" id="id5">
+<h3>章节<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>one
+=====
+two
+-----
+three
+~~~~~~~
+four
+#######</pre>
+</div>
+<p>需要注意的下面======要长与标题，每类标题上留个空行</p>
+</div>
+<div class="section" id="id6">
+<h3>表格<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>=====   =====
+iiiiiiiiiiiii
+=====   ======
+2222    222222
+33333   444444
+=====   ======</pre>
+</div>
+<p>列表表格</p>
+<div class="highlight-python"><pre>.. list-table:: Frozen Delights!
+  :widths: 15 10 30
+    :header-rows: 1
+
+   * - Treat
+     - Quantity
+     - Description
+   * - Albatross
+     - 2.99
+     - On a stick!
+   * - Crunchy Frog
+     - 1.49
+     - If we took the bones out, it wouldn't be
+       crunchy, now would it?
+   * - Gannet Ripple
+     - 1.99
+     - On a stick!</pre>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>超链接<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>外部链接</p>
+<div class="highlight-python"><pre>`text &lt;http://example.com&gt;`</pre>
+</div>
+<dl class="docutils">
+<dt>内部链接</dt>
+<dd><p class="first">在文本标题之前:</p>
+<div class="last highlight-python"><pre>.. reference:</pre>
+</div>
+</dd>
+</dl>
+<p>在其他文件:</p>
+<div class="highlight-python"><pre>:ref:`reference`</pre>
+</div>
+<p>就可以链接之前标记文件了</p>
+</div>
+<div class="section" id="id8">
+<h3>其他<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>|today|</pre>
+</div>
+<p>将被替换为当前日期</p>
+<div class="highlight-python"><pre>| cext
+| tttt</pre>
+</div>
+<p>竖杠不想用列表又想换行时使用</p>
+</div>
+<div class="section" id="id9">
+<h3>索引生成<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>文件标题之前</p>
+<div class="highlight-python"><pre>.. index::
+   single: execution; context
+   module: __main__
+   module: sys
+   triple: module; search; path
+
+   The execution context
+   ---------------------</pre>
+</div>
+<p>这个指令包含5个条目, 产生的索引会链接到页面确切的位置(离线时是相关的页码).</p>
+<p>索引指令会在源位置插入参考标签, 并会放在它们实际所映射内容的前面，上面例子中实际映射内容是标题.</p>
+<p>条目类型:</p>
+<dl class="docutils">
+<dt>single</dt>
+<dd>创建单一索引条目. 可以使用分号分隔子条目(该符号也用来描述创建了那些条目).</dd>
+<dt>pair</dt>
+<dd>pair: loop; statement 创建两个索引条目的简写, 命名为 loop; statement 或 statement; loop.</dd>
+<dt>triple</dt>
+<dd>例如 triple: module; search; path 创建三个条目的简写, 它们是 module; search path, search; path, module 及 path; module search.</dd>
+<dt>see</dt>
+<dd>see: entry; other 创建可以映射到其他条目的索引.</dd>
+<dt>seealso</dt>
+<dd>如 see, 但是插入 “see also” 代替 “see”.</dd>
+</dl>
+<div class="line-block">
+<div class="line">其实我跟本没用这功能</div>
+<div class="line">最后在线rst转换`戳&lt;<a class="reference external" href="http://rst.ninjs.org/">http://rst.ninjs.org/</a>&gt;`</div>
+</div>
+</div>
+</div>
+</div>
+
+
+  </div>
+  </div>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, halfming.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
