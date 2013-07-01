@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>go简介 &mdash; bdm 1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="bdm 1 documentation" href="../../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">bdm</a>
+        <span class="navbar-text pull-left"><b>1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../linux/base/index.html">linux基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../linux/server/index.html">linux服务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../linux/tools/index.html">linux工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../linux/other/index.html">其他</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../network/base/index.html">网络基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/cisco/index.html">思科内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/operation/index.html">网络操作</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../bash/index.html">bash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c/index.html">c</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">go</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../other/web/index.html">web内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../other/algorithm/index.html">算法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../other/think/index.html">偶尔的胡思乱想和转载</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">go简介</a><ul>
+<li><a class="reference internal" href="#id1">安装</a></li>
+<li><a class="reference internal" href="#hello-world">hello,world</a></li>
+<li><a class="reference internal" href="#id2">变量，类型和保留字</a></li>
+<li><a class="reference internal" href="#id3">字符串</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+            
+            
+              <li>
+  <a href="../../_sources/program/go/go-start.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+  <div class="span3 bs-docs-sidebar "><br /><br />
+  
+              
+              
+  
+  <ul class="nav nav-list bs-docs-sidenav affix"><ul>
+<li><a class="reference internal" href="#">go简介</a><ul>
+<li><a class="reference internal" href="#id1">安装</a></li>
+<li><a class="reference internal" href="#hello-world">hello,world</a></li>
+<li><a class="reference internal" href="#id2">变量，类型和保留字</a></li>
+<li><a class="reference internal" href="#id3">字符串</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+            
+  </div>
+  <div class="span9">
+  
+  <div class="section" id="go">
+<h1>go简介<a class="headerlink" href="#go" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>安装<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>首先安装 Mercurial(获取 hg 命令)。在 Ubuntu/Debian/Fedora 需要安装 mercu-</li>
+</ul>
+<p>rial 包;
+• 为了编译 Go 需要包:bison,gcc,libc6-dev,ed,gawk 和make;
+• 设置环境变量 GOROOT 作为 Go 的安装目录:
+% export GOROOT= ̃/go
+• 然后获取 Go 最新的发布版(=Go 1)源代码:
+% hg clone -r release <a class="reference external" href="https://go.googlecode.com/hg/">https://go.googlecode.com/hg/</a> $GOROOT
+• 设置 PATH 指向到 Go 的二进制文件所在目录,这样就可以让 Shell 找到它们:
+% export PATH=$GOROOT/bin:$PATH
+• 编译 Go
+% cd $GOROOT/src
+% ./all.bash</p>
+<p>go doc
+godoc</p>
+</div>
+<div class="section" id="hello-world">
+<h2>hello,world<a class="headerlink" href="#hello-world" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>//hello.go
+package main
+
+import "fmt"
+
+func main() {
+  fmt.Println("hello,world")
+}</pre>
+</div>
+<p>运行</p>
+<ol class="arabic simple">
+<li>go run hello.go</li>
+<li>go build</li>
+<li>go install</li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h2>变量，类型和保留字<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>声明变量有两种方式</p>
+<ol class="arabic simple">
+<li>指定类型</li>
+</ol>
+<div class="highlight-python"><pre>var a int
+a = 15
+
+var (
+  x int
+  b bool
+)</pre>
+</div>
+<ol class="arabic simple" start="2">
+<li>不指定类型</li>
+</ol>
+<div class="highlight-python"><pre>a := 15
+b := 16
+
+a, b := 12, 15
+
+_, b := 56, 78
+//下划线代表丢弃该值</pre>
+</div>
+<p>常量</p>
+<div class="highlight-python"><pre>const (
+  a = iota
+  b = iota
+)
+//iota生成枚举第一次a=0 第二次调用值为1 所以b=1
+const (
+  a int = 0
+)
+//当然也可以指定类型</pre>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>字符串<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>s := "hello"
+s[0] = 'c' 修改第一个元素
+
+• func 用于定义函数和方法;</pre>
+</div>
+<ul class="simple">
+<li>return 用于从函数返回,func 和 return 参阅第 3 章了解详细信息;</li>
+<li>go 用于并行(第 7 章);</li>
+<li>select 用于选择不同类型的通讯,参阅第 7 章;</li>
+<li>interface 参阅第 6 章;</li>
+<li>struct 用于抽象数据类型,参阅第 5 章;</li>
+<li>type 同样参阅第 5 章。</li>
+</ul>
+</div>
+</div>
+
+
+  </div>
+  </div>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, halfming.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
